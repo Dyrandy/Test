@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TwoPark</title>
+    <link rel="stylesheet" type="text/css" href="../css/board.css">
+</head>
+
+<body>
+    <div id="app">
+        <router-view name="header"></router-view>
+        <table class="boardTable">
+            <tr class="tableHead">
+                <th class="num">NUM</th>
+                <th class="title">TITLE</th>
+                <th class="madeBy"> MADE BY</th>
+                <th class="date">DATE</th>
+            </tr>
+    
+            <tr class="tableAttribute">
+                <td class="num">Num</td>
+                <td class="title">Title</td>
+                <td class="madeBy">Made By</td>
+                <td class="date">Date</td>
+            </tr>
+        </table>
+        <router-view name="body"></router-view>
+        <router-view name="footer"></router-view>
+    </div>
+
+    <script src="../js/vue.js"></script>
+    <script src="../js/router.js"></script>
+
+    <script>
+        var Body = { template: `` };
+        var Header = { template: '<div> This is Header</div>'};
+        var Footer = { template: '<div> This is Footer</div>' };
+
+        var router = new VueRouter({
+            routes: [
+                {
+                    path: '/',
+                    components: {
+                        body: Body,
+                        header: Header,
+                        footer: Footer
+                    }
+                }
+                
+            ]
+        });
+
+        var app = new Vue({
+            router
+        }).$mount('#app');
+    </script>
+</body>
+</html>
