@@ -1,0 +1,12 @@
+.boardTable{
+    width: 80%;
+    padding-left: 20%;
+    padding-right: 20%;
+    border-collapse: collapse;
+}
+.tableHead, .tableAttribute{
+    text-align: center;
+}
+td{
+    border: 1px solid #ccc;
+}
