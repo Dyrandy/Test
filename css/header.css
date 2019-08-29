@@ -1,0 +1,13 @@
+            *{margin: 0; padding: 0;}
+            li{list-style: none;}
+            a{text-decoration: noen;}
+
+            .wrapper{width: 1170px; margin: 0 auto;}
+            .clearfix{content: '';display: block; clear: both;}
+            
+            header{height: 75px; background-color:orangered; border: 1px solid white;
+            position: fixed; width: 100%; z-index: 9999; top: 0; left: 0;}
+            h1{color: white; line-height: 75px;float:left;margin-left: 10px;}
+            .menu{float:right;}
+            .menu li{float:left;}
+            .menu a{line-height: 75px; color: white; padding: 0 15px; display: block;}
