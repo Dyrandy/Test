@@ -7,13 +7,8 @@
   <title>TwoPark</title>
 </head>
 
-<!-- Include Vue.js Library -->
-<!--<script src="../js/vue.js"></script>
-<script src="../js/router.js"></script>-->
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
 <!-- Include CSS File -->
-<link rel="stylesheet" type="text/css" href="css/register.css"
+<link rel="stylesheet" type="text/css" href="css/register.css">
 
 <body>
   <div align="center" id="title" v-bind:style="styleVue">
@@ -30,74 +25,11 @@
       <button v-on:click="check">Register</button>
     </div>
    </div>
-
-
-
-
-
 </body>
 
-<script>
-    // Title Tag
-    var title_style = new Vue({
-        el : '#title',
-        data : {
-            title : 'TwoPark Register!',
-            styleVue : {
-                fontSize : '30px',
-                fontWeight : 'bold',
-                color : 'blue',
-                marginTop : '100px',
-                marginBottom : '10px'
-            }
-        }
-    })
+<!-- Include Vue.js Library -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="./js/register.js"></script>
 
-    // Login Check - NULL Value Request Protect
-    var login_check = new Vue({
-      el : '#check',
-      data : {
-          id : '',
-          nickname : '',
-          email : '',
-          pw : '',
-          repw : ''
-      },
-      methods :{
-         // need clean code
-          check: function () {
-            if(this.id == '') {
-                alert('Input Your ID')
-            }
-            else if(this.nickname == '') {
-                  alert('Input Your NickName')
-            }
-            else if(this.email == '') {
-                  alert('Input Your Email')
-            }
-            else if(this.pw == '') {
-                  alert('Input Your Password')
-            }
-            else if(this.repw == '') {
-                  alert('Input Your Confirm Password')
-            }
-            else if(this.repw != this.pw) {
-                  alert('NOT Match Your Password and Confirm Password')
-            }
-            else{
-
-            }
-          }
-      }
-    })
-
-    // AJAX CODE using Vue-Router Library - ~ ing - 2019.08.29
-    var ajax = new Vue({
-        methods : {
-            getData: function(){
-
-            }
-        }
-    })
-</script>
 </html>
